@@ -1,0 +1,5 @@
+# World to backup (includes all dimensions)
+world: world
+
+# Directory to backup to
+path: /home/rnorris/minecraft/backups

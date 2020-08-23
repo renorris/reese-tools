@@ -1,0 +1,42 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${author}
+
+main: ${mainClass}
+api-version: 1.16
+description: ${description}
+
+commands:
+  bloc:
+    description: Broadcasts player location to the server
+    usage: /bloc
+    permission: reesetools.bloc
+  snuff:
+    description: Snuff the noice
+    usage: /snuff <message>
+    permission: reesetools.snuff
+  teleport:
+    description: Teleport to world
+    usage: /teleport <worldname>
+    permission: reesetools.teleport
+  createworld:
+    description: Create world
+    usage: /createworld <worldname>
+    permission: reesetools.createworld
+  repair:
+    description: Repair currently held item
+    usage: /repair
+    permission: reesetools.repair
+
+permissions:
+  reesetools.bloc:
+    default: true
+  reesetools.snuff:
+    default: true
+  reesetools.repair:
+    default: op
+  reesetools.teleport:
+    default: op
+  reesetools.createworld:
+    default: op
