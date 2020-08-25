@@ -1,5 +1,7 @@
 package com.reese.reesetools;
 
+import com.reese.reesetools.commands.*;
+import com.reese.reesetools.tasks.WorldBackupCheck;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -26,8 +28,9 @@ public class ReeseTools extends JavaPlugin {
         this.getCommand("repair").setExecutor(new RepairItem());
         this.getCommand("createworld").setExecutor(new CreateWorld());
         this.getCommand("teleport").setExecutor(new TeleportToWorld());
+        this.getCommand("worldbackup").setExecutor(new ManualWorldBackup(this));
 
-        BukkitTask backupTask = new WorldBackup(this.plugin).runTaskTimer(this.plugin, 20, 200);
+        BukkitTask backupCheckTask = new WorldBackupCheck(this.plugin).runTaskTimer(this.plugin, 20, 200);
     }
 
     @Override

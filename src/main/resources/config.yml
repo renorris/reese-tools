@@ -3,3 +3,6 @@ world: world
 
 # Directory to backup to
 path: /home/rnorris/minecraft/backups
+
+# Amount of ticks to delay backup (in order to let players know before it happens)
+backup-delay: 600

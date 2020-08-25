@@ -2,10 +2,8 @@ name: ${name}
 version: ${version}
 description: ${description}
 author: ${author}
-
 main: ${mainClass}
 api-version: 1.16
-description: ${description}
 
 commands:
   bloc:
@@ -28,6 +26,10 @@ commands:
     description: Repair currently held item
     usage: /repair
     permission: reesetools.repair
+  worldbackup:
+    description: Runs WorldBackupRun on the next server tick
+    usage: /worldbackup
+    permission: reesetools.worldbackup
 
 permissions:
   reesetools.bloc:
@@ -39,4 +41,6 @@ permissions:
   reesetools.teleport:
     default: op
   reesetools.createworld:
+    default: op
+  reesetools.worldbackup:
     default: op
